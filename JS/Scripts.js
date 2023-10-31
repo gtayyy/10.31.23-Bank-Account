@@ -4,6 +4,13 @@ const BankAccount = {
     return {
       name: name,
       balance: initialDeposit,
+      deposit: function (amount) {
+        if (amount > 0) {
+          this.balance += amount;
+        } else {
+          console.log('Deposit amount must be greater than 0.');
+        }
+      },
     };
   },
 };
